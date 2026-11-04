@@ -3,24 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ease Flash Entregas e Logística - Paranaguá</title>
+<title>Ease Flash - Paranaguá</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#f2f2f2}
 .header{background:#d92b2b;color:#fff;padding:15px}
-.header h1{font-size:24px;line-height:1}
-.header h1 span{color:#ffcc00}
+.header h1{font-size:24px}
 .header p{font-size:13px;margin-top:4px}
 .search{margin:12px;background:#fff;padding:12px;border-radius:10px}
 .search input{width:100%;border:0;outline:0;font-size:15px}
 .cats{display:flex;gap:10px;overflow:auto;padding:0 12px 10px}
-.cat{min-width:70px;background:#fff;border-radius:12px;padding:12px 8px;text-align:center;font-size:13px;font-weight:bold;border:2px solid transparent}
-.cat.active{border-color:#d92b2b;background:#fff5d6}
-.card{background:#fff;margin:0 12px 12px;border-radius:14px;overflow:hidden;display:flex;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.cat{min-width:70px;background:#fff;border-radius:12px;padding:12px 8px;text-align:center;font-size:13px;font-weight:bold}
+.cat.active{border:2px solid #d92b2b;background:#fff5d6}
+.card{background:#fff;margin:0 12px 12px;border-radius:14px;overflow:hidden;display:flex}
 .card img{width:110px;object-fit:cover}
 .card-info{padding:12px;flex:1}
 .price{color:#d92b2b;font-weight:bold}
-.btn{background:#d92b2b;color:#fff;border:0;padding:10px 14px;border-radius:8px;font-weight:bold;width:100%;margin-top:6px;display:block;text-align:center;text-decoration:none}
+.btn{background:#d92b2b;color:#fff;border:0;padding:12px;border-radius:8px;font-weight:bold;width:100%;margin-top:6px;display:block;text-align:center;text-decoration:none}
 .btn-green{background:#1aa64b}
 .btn-yellow{background:#ffcc00;color:#000}
 .tabs{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;border-top:1px solid #ddd;padding:8px}
@@ -29,7 +28,6 @@ body{background:#f2f2f2}
 .page{display:none;padding-bottom:80px}
 .page.active{display:block}
 .driver-card{background:#fff;margin:12px;border-radius:16px;padding:16px;border:2px solid #ffcc00}
-.map{height:180px;display:flex;align-items:center;justify-content:center;font-weight:bold;background-image:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600');background-size:cover;color:#fff;text-shadow:0 1px 3px #000}
 .ganho{background:#ffcc00;padding:10px;border-radius:10px;display:flex;justify-content:space-between;font-weight:bold;margin:10px 0}
 .badge{background:#ffcc00;padding:3px 8px;border-radius:20px;font-size:12px;font-weight:bold}
 .saldo{display:flex;gap:10px;margin:12px}
@@ -38,26 +36,21 @@ input,select{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-r
 </style>
 </head>
 <body>
-<div class="header">
-<h1>⚡ Ease Flash<br>Entregas e Logística</h1>
-<p>📍 Paranaguá, PR • Entregando agora • Zap (41) 98809-9495</p>
-</div>
+<div class="header"><h1>⚡ Ease Flash<br>Entregas e Logística</h1><p>📍 Paranaguá, PR • Zap (41) 98809-9495</p></div>
 <div id="cliente" class="page active">
-<div class="search"><input placeholder="Buscar restaurantes, pratos..."></div>
+<div class="search"><input placeholder="Buscar restaurantes..."></div>
 <div class="cats"><div class="cat active">🍱 Marmitas</div><div class="cat">🍔 Lanches</div><div class="cat">🍕 Pizza</div><div class="cat">🛒 Mercado</div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300"><div class="card-info"><span class="badge">Mais pedido</span><h3>Sabores do Litoral</h3><p>⭐ 4.6 • 25-35 min</p><p class="price">Taxa R$ 3,99</p><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20pedir%20Marmita%20Sabores%20do%20Litoral%20R%24%2019%2C90%20-%20Meu%20endere%C3%A7o%20%C3%A9%3A">Pedir Marmita R$ 19,90 no Zap</a></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300"><div class="card-info"><h3>Pizza da Ilha</h3><p>⭐ 4.8 • 30-45 min</p><p class="price">Taxa R$ 4,50</p><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20pedir%20Pizza%20da%20Ilha%20R%24%2034%2C90%20-%20Meu%20endere%C3%A7o%20%C3%A9%3A">Pedir Pizza R$ 34,90 no Zap</a></div></div>
-<div style="margin:12px;background:#fff;padding:14px;border-radius:12px;text-align:center"><b>Não achou? Chama no Zap</b><br><a class="btn btn-green" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20fazer%20um%20pedido">💬 Chamar no WhatsApp (41) 98809-9495</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300"><div class="card-info"><span class="badge">Mais pedido</span><h3>Sabores do Litoral</h3><p>⭐ 4.6 • 25-35 min</p><p class="price">Taxa R$ 3,99</p><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20pedir%20Marmita%20R%24%2019%2C90">Pedir Marmita R$ 19,90 no Zap</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300"><div class="card-info"><h3>Pizza da Ilha</h3><p>⭐ 4.8 • 30-45 min</p><p class="price">Taxa R$ 4,50</p><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20pedir%20Pizza%20R%24%2034%2C90">Pedir Pizza R$ 34,90 no Zap</a></div></div>
+<div style="margin:12px;background:#fff;padding:14px;border-radius:12px;text-align:center"><a class="btn btn-green" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20fazer%20um%20pedido">💬 Chamar no WhatsApp (41) 98809-9495</a></div>
 </div>
 <div id="entregador" class="page">
-<div class="saldo"><div>🟢 Online<br><small>Conectado</small></div><div>Saldo hoje<br>R$ 127,40</div></div>
-<div class="map">📍 MAPA - CENTRO / JARDIM IGUAÇU</div>
-<div class="driver-card"><h2 style="color:#d92b2b">⚡ NOVA ENTREGA!</h2><p><b>2,4 km • ~12 min</b></p><br><p>🏠 <b>Retirada:</b><br>Sabor do Litoral<br><small>Rua XV de Novembro, 1024 - Centro</small></p><br><p>📍 <b>Entrega:</b><br>Ana Souza<br><small>Av. Gabriel de Lara, 890 - Jardim Iguaçu</small></p><div class="ganho"><span>Ganho R$ 8,50</span><span>Pix / Dinheiro</span></div><a class="btn btn-green" href="https://wa.me/5541988099495?text=Ol%C3%A1!%20Sou%20entregador%20Ease%20Flash%20e%20quero%20aceitar%20a%20entrega%20%231024%20-%20R%24%208%2C50">✅ ACEITAR ENTREGA NO ZAP</a></div>
-<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Quero ser Entregador Flash</h3><input placeholder="Seu nome"><input placeholder="Seu WhatsApp"><input placeholder="Moto / Modelo"><select><option>Centro</option><option>Jardim Iguaçu</option><option>Valadares</option><option>Parque São João</option></select><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1!%20Quero%20ser%20entregador%20Ease%20Flash!%20Meu%20nome%20%C3%A9%3A">Cadastrar como Entregador</a></div>
+<div class="saldo"><div>🟢 Online</div><div>Saldo hoje<br>R$ 127,40</div></div>
+<div class="driver-card"><h2 style="color:#d92b2b">⚡ NOVA ENTREGA! 2,4km</h2><p>Retirada: Sabor do Litoral - Centro</p><p>Entrega: Jardim Iguaçu</p><div class="ganho"><span>Ganho R$ 8,50</span></div><a class="btn btn-green" href="https://wa.me/5541988099495?text=Quero%20aceitar%20entrega%20R%24%208%2C50">✅ ACEITAR NO ZAP</a></div>
+<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Quero ser Entregador</h3><input placeholder="Seu nome"><input placeholder="Seu WhatsApp"><a class="btn" href="https://wa.me/5541988099495?text=Quero%20ser%20entregador%20Ease%20Flash!">Cadastrar como Entregador</a></div>
 </div>
 <div id="restaurante" class="page">
-<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Painel do Restaurante</h3><p>Sabores do Litoral - Centro</p><p style="margin:10px 0">Pedido #1024 - Ana Souza<br>1x Marmita Frango - R$ 19,90</p><a class="btn btn-green" href="https://wa.me/5541988099495?text=Pedido%20%231024%20ACEITO!%20Chamar%20entregador%20Flash">Aceitar Pedido e Chamar Flash</a><a class="btn btn-yellow" href="https://wa.me/5541988099495?text=Pedido%20%231024%20PRONTO!">Marcar como Pronto</a></div>
-<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Cadastrar meu Restaurante</h3><input placeholder="Nome do restaurante"><input placeholder="Seu WhatsApp"><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1!%20Quero%20cadastrar%20meu%20restaurante%20no%20Ease%20Flash!">Cadastrar Restaurante</a></div>
+<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Painel Restaurante</h3><p>Pedido #1024 - R$ 19,90</p><a class="btn btn-green" href="https://wa.me/5541988099495?text=Pedido%20%231024%20ACEITO!">Aceitar e Chamar Flash</a></div>
 </div>
 <div class="tabs"><button class="active" onclick="aba('cliente',this)">🏠 Cliente</button><button onclick="aba('entregador',this)">🛵 Entregador</button><button onclick="aba('restaurante',this)">🍳 Restaurante</button></div>
 <script>
