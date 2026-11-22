@@ -3,28 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EASE FLASH CORRIDAS - Chamou, Chegou! Paranaguá</title>
+<title>EASE FLASH CORRIDAS</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial;background:#f5f5f5}
-header{background:#FFD700;text-align:center;padding:20px}
+body{font-family:Arial,sans-serif;background:#f5f5f5}
+header{background:#FFD700;text-align:center;padding:20px 10px}
 header h1{font-size:28px;font-weight:900}
+header p{font-weight:700}
 .sub{background:#000;color:#FFD700;text-align:center;padding:8px;font-size:13px}
 .langs{background:#111;text-align:center;padding:12px}
 .langs button{border:1px solid #FFD700;background:transparent;color:#fff;padding:8px 14px;border-radius:20px;margin:4px;font-weight:700}
-.tabs{display:flex;background:#fff}
-.tabs button{flex:1;padding:14px;border:none;background:#fff;font-weight:800}
+.tabs{display:flex;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.1)}
+.tabs button{flex:1;padding:14px;border:none;background:#fff;font-weight:800;cursor:pointer}
 .tabs button.active{background:#FFF9C4;border-bottom:3px solid #FFD700}
 .card{background:#fff;margin:15px;border-radius:15px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.card h2{font-size:22px;margin-bottom:15px}
 .tipo{display:flex;gap:10px;margin-bottom:15px}
-.tipo button{flex:1;padding:15px;border:2px solid #ddd;border-radius:12px;background:#fff;font-weight:900}
+.tipo button{flex:1;padding:15px;border:2px solid #ddd;border-radius:12px;background:#fff;font-weight:900;font-size:16px;cursor:pointer}
 .tipo button.active{background:#FFF9C4;border-color:#FFD700}
 label{font-weight:700;display:block;margin:12px 0 6px}
-input,select{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;font-size:16px}
-.btn-amarelo{background:#FFD700;width:100%;padding:17px;border:none;border-radius:12px;font-weight:900;font-size:17px;margin-top:18px}
+input,select{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;font-size:16px;background:#fafafa}
+.btn-amarelo{background:#FFD700;color:#000;width:100%;padding:17px;border:none;border-radius:12px;font-weight:900;font-size:17px;margin-top:18px;cursor:pointer}
 .btn-zap{background:#25D366;color:#fff;width:100%;padding:16px;border:none;border-radius:12px;font-weight:900;font-size:17px;margin-top:10px;display:block;text-align:center;text-decoration:none}
+.center{text-align:center;color:#555;font-size:13px;margin:12px 0}
 .qr{text-align:center}
-.qr img{width:200px}
+.qr img{width:200px;border:1px solid #ddd;border-radius:10px;padding:5px}
 .footer{text-align:center;padding:20px;color:#888;font-size:13px}
 .hidden{display:none}
 </style>
@@ -34,11 +37,21 @@ input,select{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;fo
 <div class="sub">Funciona em Android e iPhone - Grátis</div>
 <div class="langs"><button>BR PT</button><button>US EN</button><button>ES ES</button><button>FR FR</button><button>DE DE</button><button>IT IT</button><button>CN ZH</button><button>JP JA</button><button>SA AR</button></div>
 <div class="tabs"><button class="active" onclick="aba('corrida',this)">CORRIDA</button><button onclick="aba('motoristas',this)">MOTORISTAS</button><button onclick="aba('clientes',this)">CLIENTES</button><button onclick="aba('mapa',this)">MAPA</button></div>
-<div id="corrida" class="card"><h2>Pedir Corrida</h2><div class="tipo"><button id="btnCarro" class="active" onclick="setTipo('CARRO')">🚗 CARRO</button><button id="btnMoto" onclick="setTipo('MOTO')">🏍️ MOTO</button></div><label>De onde?</label><input id="origem" placeholder="Ex: Rodoviaria Paranaguá"><label>Para onde?</label><input id="destino" placeholder="Ex: Centro, Porto"><label>Pagamento</label><select id="pag"><option>Dinheiro / Pix</option><option>Pix - donarita1983rita3@gmail.com</option></select><button class="btn-amarelo" onclick="chamar()">CHAMAR AGORA - CHAMOU, CHEGOU!</button><a class="btn-zap" href="https://wa.me/5541988099495?text=Oi!%20Quero%20corrida%20EASE%20FLASH">📲 CHAMAR NO WHATSAPP 41 98809-9495</a><div class="qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://donarita1983rita3.github.io/ease-flash-entregas-e-logistica/"></div></div>
-<div id="motoristas" class="card hidden"><h2>Motoristas</h2><p>Quer ganhar dinheiro em Paranaguá? Moto a partir de R$8</p><a class="btn-zap" href="https://wa.me/5541988099495?text=Quero%20ser%20motorista">QUERO SER MOTORISTA</a></div>
-<div id="clientes" class="card hidden"><h2>Clientes</h2><p>Pix: donarita1983rita3@gmail.com<br>Zap: 41 98809-9495</p></div>
-<div id="mapa" class="card hidden"><iframe src="https://www.google.com/maps?q=Paranaguá,PR&output=embed" style="width:100%;height:350px;border:0"></iframe></div>
-<div class="footer">EASE FLASH - Paranaguá PR - Zap 41 98809-9495</div>
+<div id="corrida" class="card">
+<h2>Pedir Corrida</h2>
+<div class="tipo"><button id="btnCarro" class="active" onclick="setTipo('CARRO')">🚗 CARRO</button><button id="btnMoto" onclick="setTipo('MOTO')">🏍️ MOTO</button></div>
+<label>De onde?</label><input id="origem" placeholder="Ex: Rodoviaria Paranaguá">
+<label>Para onde?</label><input id="destino" placeholder="Ex: Centro, Porto">
+<label>Pagamento</label><select id="pag"><option>Dinheiro / Pix</option><option>Pix - donarita1983rita3@gmail.com</option><option>Dinheiro</option></select>
+<button class="btn-amarelo" onclick="chamar()">CHAMAR AGORA - CHAMOU, CHEGOU!</button>
+<a class="btn-zap" href="https://wa.me/5541988099495?text=Oi!%20Quero%20corrida%20EASE%20FLASH">📲 CHAMAR NO WHATSAPP 41 98809-9495</a>
+<div class="center">EASE FLASH - Carro e Moto em Paranaguá 24h</div>
+<div class="qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://donarita1983rita3.github.io/ease-flash-entregas-e-logistica/"></div>
+</div>
+<div id="motoristas" class="card hidden"><h2>Motoristas</h2><p>Quer ganhar dinheiro dirigindo em Paranaguá?<br><br>✅ Moto a partir de R$8<br>✅ Carro - você faz seu horário<br>✅ Recebe via Pix na hora</p><a class="btn-zap" href="https://wa.me/5541988099495?text=Quero%20ser%20motorista%20EASE%20FLASH">QUERO SER MOTORISTA</a></div>
+<div id="clientes" class="card hidden"><h2>Clientes</h2><p>Preço justo, sem taxa absurda.<br><br>📍 Paranaguá inteira<br>💛 Pix: donarita1983rita3@gmail.com<br>📲 Zap: 41 98809-9495</p></div>
+<div id="mapa" class="card hidden" style="padding:0;overflow:hidden"><iframe src="https://www.google.com/maps?q=Paranaguá,PR&output=embed" style="width:100%;height:350px;border:0"></iframe></div>
+<div class="footer">EASE FLASH CORRIDAS - Paranaguá PR<br>Zap 41 98809-9495 - Pix donarita1983rita3@gmail.com</div>
 <script>
 let tipo='CARRO';
 function setTipo(t){tipo=t;document.getElementById('btnCarro').classList.toggle('active',t=='CARRO');document.getElementById('btnMoto').classList.toggle('active',t=='MOTO');}
