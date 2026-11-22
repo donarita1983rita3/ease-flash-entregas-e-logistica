@@ -1,60 +1,31 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ease Flash - Paranaguá</title>
+<title>EASE FLASH - Chamou, Chegou!</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f2f2f2}
-.header{background:#d92b2b;color:#fff;padding:15px}
-.header h1{font-size:24px}
-.header p{font-size:13px;margin-top:4px}
-.search{margin:12px;background:#fff;padding:12px;border-radius:10px}
-.search input{width:100%;border:0;outline:0;font-size:15px}
-.cats{display:flex;gap:10px;overflow:auto;padding:0 12px 10px}
-.cat{min-width:70px;background:#fff;border-radius:12px;padding:12px 8px;text-align:center;font-size:13px;font-weight:bold}
-.cat.active{border:2px solid #d92b2b;background:#fff5d6}
-.card{background:#fff;margin:0 12px 12px;border-radius:14px;overflow:hidden;display:flex}
-.card img{width:110px;object-fit:cover}
-.card-info{padding:12px;flex:1}
-.price{color:#d92b2b;font-weight:bold}
-.btn{background:#d92b2b;color:#fff;border:0;padding:12px;border-radius:8px;font-weight:bold;width:100%;margin-top:6px;display:block;text-align:center;text-decoration:none}
-.btn-green{background:#1aa64b}
-.btn-yellow{background:#ffcc00;color:#000}
-.tabs{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;border-top:1px solid #ddd;padding:8px}
-.tabs button{flex:1;border:0;background:0;font-weight:bold;padding:10px;font-size:14px;color:#777}
-.tabs button.active{color:#d92b2b}
-.page{display:none;padding-bottom:80px}
-.page.active{display:block}
-.driver-card{background:#fff;margin:12px;border-radius:16px;padding:16px;border:2px solid #ffcc00}
-.ganho{background:#ffcc00;padding:10px;border-radius:10px;display:flex;justify-content:space-between;font-weight:bold;margin:10px 0}
-.badge{background:#ffcc00;padding:3px 8px;border-radius:20px;font-size:12px;font-weight:bold}
-.saldo{display:flex;gap:10px;margin:12px}
-.saldo div{flex:1;background:#fff;padding:12px;border-radius:10px;text-align:center;font-weight:bold}
-input,select{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:8px}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial;background:#111;color:#fff;text-align:center}header{background:#FFD700;color:#000;padding:22px;font-weight:900;font-size:26px;line-height:1.1}header small{font-size:14px}iframe{width:100%;height:320px;border:0}input{width:90%;padding:15px;margin:8px 0;border-radius:10px;border:none;font-size:16px}.btn{background:#FFD700;color:#000;padding:18px 20px;font-size:19px;font-weight:900;border:none;border-radius:50px;margin:10px auto;display:block;width:90%;text-decoration:none}.btn2{background:#fff}.footer{padding:20px;color:#aaa;font-size:14px}
 </style>
 </head>
 <body>
-<div class="header"><h1>⚡ Ease Flash<br>Entregas e Logística</h1><p>📍 Paranaguá, PR • Zap (41) 98809-9495</p></div>
-<div id="cliente" class="page active">
-<div class="search"><input placeholder="Buscar restaurantes..."></div>
-<div class="cats"><div class="cat active">🍱 Marmitas</div><div class="cat">🍔 Lanches</div><div class="cat">🍕 Pizza</div><div class="cat">🛒 Mercado</div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300"><div class="card-info"><span class="badge">Mais pedido</span><h3>Sabores do Litoral</h3><p>⭐ 4.6 • 25-35 min</p><p class="price">Taxa R$ 3,99</p><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20pedir%20Marmita%20R%24%2019%2C90">Pedir Marmita R$ 19,90 no Zap</a></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300"><div class="card-info"><h3>Pizza da Ilha</h3><p>⭐ 4.8 • 30-45 min</p><p class="price">Taxa R$ 4,50</p><a class="btn" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20pedir%20Pizza%20R%24%2034%2C90">Pedir Pizza R$ 34,90 no Zap</a></div></div>
-<div style="margin:12px;background:#fff;padding:14px;border-radius:12px;text-align:center"><a class="btn btn-green" href="https://wa.me/5541988099495?text=Ol%C3%A1%20Ease%20Flash!%20Quero%20fazer%20um%20pedido">💬 Chamar no WhatsApp (41) 98809-9495</a></div>
+<header>⚡ EASE FLASH<br><small>CHAMOU, CHEGOU! PARANAGUÁ</small></header>
+<iframe src="https://www.google.com/maps?q=Paranaguá,PR&output=embed"></iframe>
+<div style="padding:15px">
+<input id="origem" placeholder="📍 De onde você está?">
+<input id="destino" placeholder="🏁 Para onde vai?">
+<a class="btn" onclick="chamar('MOTO')" href="#">🏍️ CHAMAR MOTO - A PARTIR DE R$8</a>
+<a class="btn" onclick="chamar('CARRO')" href="#">🚗 CHAMAR CARRO</a>
+<a class="btn btn2" href="https://wa.me/5541988099495?text=Oi!%20Vi%20o%20fone%20de%20R$25%20no%20EASE%20FLASH">🎧 FONE R$25 - CHAMA NO ZAP</a>
 </div>
-<div id="entregador" class="page">
-<div class="saldo"><div>🟢 Online</div><div>Saldo hoje<br>R$ 127,40</div></div>
-<div class="driver-card"><h2 style="color:#d92b2b">⚡ NOVA ENTREGA! 2,4km</h2><p>Retirada: Sabor do Litoral - Centro</p><p>Entrega: Jardim Iguaçu</p><div class="ganho"><span>Ganho R$ 8,50</span></div><a class="btn btn-green" href="https://wa.me/5541988099495?text=Quero%20aceitar%20entrega%20R%24%208%2C50">✅ ACEITAR NO ZAP</a></div>
-<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Quero ser Entregador</h3><input placeholder="Seu nome"><input placeholder="Seu WhatsApp"><a class="btn" href="https://wa.me/5541988099495?text=Quero%20ser%20entregador%20Ease%20Flash!">Cadastrar como Entregador</a></div>
-</div>
-<div id="restaurante" class="page">
-<div style="background:#fff;margin:12px;padding:16px;border-radius:12px"><h3>Painel Restaurante</h3><p>Pedido #1024 - R$ 19,90</p><a class="btn btn-green" href="https://wa.me/5541988099495?text=Pedido%20%231024%20ACEITO!">Aceitar e Chamar Flash</a></div>
-</div>
-<div class="tabs"><button class="active" onclick="aba('cliente',this)">🏠 Cliente</button><button onclick="aba('entregador',this)">🛵 Entregador</button><button onclick="aba('restaurante',this)">🍳 Restaurante</button></div>
+<div class="footer">Pix: donarita1983rita3@gmail.com<br>Zap: 41 98809-9495<br>EASE FLASH - Paranaguá PR</div>
 <script>
-function aba(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+function chamar(tipo){
+var o=document.getElementById('origem').value;
+var d=document.getElementById('destino').value;
+var msg="Oi! Quero corrida EASE FLASH de "+tipo+"! De: "+o+" Para: "+d;
+window.open("https://wa.me/5541988099495?text="+encodeURIComponent(msg),"_blank");
+}
 </script>
 </body>
 </html>
